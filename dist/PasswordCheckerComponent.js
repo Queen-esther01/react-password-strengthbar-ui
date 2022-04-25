@@ -11,7 +11,7 @@ var _AppContext = require("./AppContext");
 
 var _checker = _interopRequireDefault(require("./checker"));
 
-require("../App.css");
+require("./App.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
