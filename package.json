@@ -2,7 +2,7 @@
   "name": "@queen-esther/password-checker",
   "version": "1.7.1",
   "description": "Password checker checks the strength of your passwords",
-  "private": false,
+  "private": true,
   "author": "Esther Ejidike",
   "license": "MIT",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build": "del dist && cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
