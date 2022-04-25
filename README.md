@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Password Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a react component that checks the strength of a password 
+and displays a password strength bar based on it.
+It checks password strength by ensuring that all
+password have at least:
 
-## Available Scripts
+**8 characters, 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character**
 
-In the project directory, you can run:
 
-### `npm start`
+## Install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install password-checker
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+By default, the `<PasswordChecker/>` component will have a width of 100%.
+To change this behaviour, wrap in a parent div and assign a width.
 
-### `npm run build`
+Pass data into the password checker using the password prop.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+import PasswordChecker from 'password-checker'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+function App() {
 
-### `npm run eject`
+    const [password, setPassword] = useState('')
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    const handlePasswordInput = (password) => {
+        setPassword(password)
+    }
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    return (
+        <div className='w-full'>
+            <input type={text} onChange={handlePasswordInput}/>
+            <PasswordChecker password={password} />
+        </div>
+    );
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Getting Password Checker Data + Custom Strength Bar
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you would like to create your own password strength bar UI, you can use the checker function instead.
+This is the function that powers the password strength bar. It returns an object with the following properties:
+`state, message, password and an array of errors`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+```javascript
+import Check from 'password-checker/function/checker'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+let result = Check('password')
 
-### Analyzing the Bundle Size
+//returns:
+// {
+//     "state": "weak",
+//     "message": "Password is weak",
+//     "password": "password",
+//     "errors": [
+//         "Password must contain at least one uppercase letter",
+//         "Password must contain at least one number",
+//         "Password must contain at least one special character"
+//     ]
+// }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+### Getting Password Checker Data + Password Checker Strength bar
 
-### Making a Progressive Web App
+If you would like to use the password checker strength bar and also get the data, 
+pass in a function to the `checkerData` prop.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+```javascript
+function App() {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    const [password, setPassword] = useState('')
 
-### Deployment
+    const handlePasswordInput = (password) => {
+        setPassword(password)
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    const getCheckerData = (data) => {
+        console.log(data)
+    }
 
-### `npm run build` fails to minify
+    return (
+        <div className='w-full'>
+            <input type={text} onChange={handlePasswordInput}/>
+            <PasswordChecker password={password} checkerData={getCheckerData} />
+        </div>
+    );
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributions / Feedback
+Please open an issue if you have any feedback, suggestions or encounter any issues, I
+would love to hear from you.
