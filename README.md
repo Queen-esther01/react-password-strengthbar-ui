@@ -7,6 +7,7 @@ password have at least:
 
 **8 characters, 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character**
 
+**Please note that this package is in development, has not been fully tested or deemed fit for for use. Testing is currently ongoing and this message will be removed when done.**
 
 ## Install
 
