@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
-import { AppContext } from './utils/AppContext';
-import Check from './function/checker';
+import { AppContext } from '../utils/AppContext';
+import Check from '../function/checker';
 import './App.css';
 
 function PasswordCheckerComponent({ password, getData }) {

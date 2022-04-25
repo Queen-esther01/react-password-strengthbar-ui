@@ -3,15 +3,20 @@
   "version": "1.3.0",
   "description": "Password checker checks the strength of your passwords",
   "private": false,
-  "author": "Esther",
+  "author": "Esther Ejidike",
   "license": "MIT",
-  "main": "dist/static/js",
-  "repository": "https://github.com/Queen-esther01/password-checker",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url" : "git+https://github.com/Queen-esther01/password-checker.git"
+  },
   "keywords": [
     "React",
     "password-checker"
   ],
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -23,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,6 +51,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24"
