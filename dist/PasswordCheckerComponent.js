@@ -9,7 +9,7 @@ var _react = require("react");
 
 var _AppContext = require("./AppContext");
 
-var _checker = _interopRequireDefault(require("../function/checker"));
+var _checker = _interopRequireDefault(require("./checker"));
 
 require("../App.css");
 
