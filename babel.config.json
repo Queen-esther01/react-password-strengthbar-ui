@@ -1,7 +1,7 @@
 {
     "presets": [
         [
-            "@babel/env",
+            "@babel/preset-env",
             {
                 "targets": {
                     "edge": "17",
@@ -13,6 +13,9 @@
                 "corejs": "3.6.5"
             }
         ],
-        "@babel/preset-react"
+        [
+            "@babel/preset-react",
+            {"runtime": "automatic"}
+        ]
     ]
 }
