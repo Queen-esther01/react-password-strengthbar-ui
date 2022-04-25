@@ -9,7 +9,7 @@ require("core-js/modules/web.dom-collections.iterator.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _AppContext = require("./utils/AppContext");
+var _AppContext = require("./AppContext");
 
 var _PasswordCheckerComponent = _interopRequireDefault(require("./PasswordCheckerComponent"));
 

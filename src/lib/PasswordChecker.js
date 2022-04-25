@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppContext } from './utils/AppContext'
+import { AppContext } from './AppContext'
 import PasswordCheckerComponent from './PasswordCheckerComponent'
 
 function PasswordChecker({ password, checkerData }) {

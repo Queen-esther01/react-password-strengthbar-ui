@@ -7,11 +7,11 @@ exports.default = void 0;
 
 var _react = require("react");
 
-var _AppContext = require("../utils/AppContext");
+var _AppContext = require("./AppContext");
 
 var _checker = _interopRequireDefault(require("../function/checker"));
 
-require("./App.css");
+require("../App.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
