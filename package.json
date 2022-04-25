@@ -1,13 +1,14 @@
 {
   "name": "password-checker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Password checker checks the strength of your passwords",
   "private": false,
   "author": "Esther",
   "license": "MIT",
   "repository": "https://github.com/Queen-esther01/password-checker",
   "keywords": [
-    "React", "password-checker"
+    "React",
+    "password-checker"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
