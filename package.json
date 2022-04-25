@@ -2,7 +2,7 @@
   "name": "@queen-esther/password-checker",
   "version": "1.7.2",
   "description": "Password checker checks the strength of your passwords",
-  "private": true,
+  "private": false,
   "author": "Esther Ejidike",
   "license": "MIT",
   "main": "dist/index.js",
