@@ -30,8 +30,7 @@ function PasswordCheckerComponent(_ref) {
   (0, _react.useEffect)(() => {
     let result = (0, _checker.default)(password);
     savePasswordCheckerResult(result);
-    console.log(result);
-    getData(result);
+    console.log(result); //getData(result)
   }, [password]); //console.log(getData)
 
   const emptyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.state) === 'empty' && 'bg-gray-200';

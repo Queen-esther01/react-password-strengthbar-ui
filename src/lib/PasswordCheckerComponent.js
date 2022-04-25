@@ -12,7 +12,7 @@ function PasswordCheckerComponent({ password, getData }) {
         let result = Check(password);
         savePasswordCheckerResult(result)
         console.log(result)
-        getData(result)
+        //getData(result)
     }, [password])
 
     //console.log(getData)
