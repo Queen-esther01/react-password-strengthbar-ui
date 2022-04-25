@@ -1,6 +1,6 @@
 {
   "name": "@queen-esther/password-checker",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Password checker checks the strength of your passwords",
   "private": true,
   "author": "Esther Ejidike",
