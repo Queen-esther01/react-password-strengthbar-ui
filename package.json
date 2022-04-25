@@ -1,6 +1,6 @@
 {
   "name": "password-checker",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Password checker checks the strength of your passwords",
   "private": false,
   "author": "Esther",
