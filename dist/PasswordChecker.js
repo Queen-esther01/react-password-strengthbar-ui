@@ -13,6 +13,8 @@ var _AppContext = require("./AppContext");
 
 var _PasswordCheckerComponent = _interopRequireDefault(require("./PasswordCheckerComponent"));
 
+var _jsxRuntime = require("react/jsx-runtime");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -31,12 +33,13 @@ function PasswordChecker(_ref) {
     },
     passwordCheckerResult: result
   };
-  return /*#__PURE__*/_react.default.createElement(_AppContext.AppContext.Provider, {
-    value: data
-  }, /*#__PURE__*/_react.default.createElement(_PasswordCheckerComponent.default, {
-    password: password,
-    getData: checkerData
-  }));
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)(_AppContext.AppContext.Provider, {
+    value: data,
+    children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_PasswordCheckerComponent.default, {
+      password: password,
+      getData: checkerData
+    })
+  });
 }
 
 var _default = PasswordChecker;

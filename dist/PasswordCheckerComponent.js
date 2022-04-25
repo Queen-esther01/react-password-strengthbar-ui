@@ -13,6 +13,8 @@ var _checker = _interopRequireDefault(require("./checker"));
 
 require("./App.css");
 
+var _jsxRuntime = require("react/jsx-runtime");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function PasswordCheckerComponent(_ref) {
@@ -54,25 +56,31 @@ function PasswordCheckerComponent(_ref) {
   const strongPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'Password is strong';
   const veryStrongPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'text-green-500';
   const veryStrongPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'Password is very strong';
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-    className: "my-4"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex gap-5 justify-between my-2"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongGreyPassword, " ").concat(veryStrongPassword)
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap justify-between my-2"
-  }, /*#__PURE__*/React.createElement("p", {
-    className: "flex items-center ".concat(emptyPasswordTextColor, " ").concat(veryWeakPasswordTextColor, " ").concat(weakPasswordTextColor, " ").concat(fairPasswordTextColor, " ").concat(strongPasswordTextColor, " ").concat(veryStrongPasswordTextColor, " text-sm ml-auto")
-  }, emptyPasswordText, " ", veryWeakPasswordText, " ", weakPasswordText, " ", fairPasswordText, " ", strongPasswordText, " ", veryStrongPasswordText))));
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
+    children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
+      className: "my-4",
+      children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
+        className: "flex gap-5 justify-between my-2",
+        children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+        }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+        }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+        }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+        }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongGreyPassword, " ").concat(veryStrongPassword)
+        })]
+      }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
+        className: "flex flex-wrap justify-between my-2",
+        children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("p", {
+          className: "flex items-center ".concat(emptyPasswordTextColor, " ").concat(veryWeakPasswordTextColor, " ").concat(weakPasswordTextColor, " ").concat(fairPasswordTextColor, " ").concat(strongPasswordTextColor, " ").concat(veryStrongPasswordTextColor, " text-sm ml-auto"),
+          children: [emptyPasswordText, " ", veryWeakPasswordText, " ", weakPasswordText, " ", fairPasswordText, " ", strongPasswordText, " ", veryStrongPasswordText]
+        })
+      })]
+    })
+  });
 }
 
 var _default = PasswordCheckerComponent;
