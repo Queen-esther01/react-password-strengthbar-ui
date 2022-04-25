@@ -5,6 +5,7 @@
   "private": false,
   "author": "Esther",
   "license": "MIT",
+  "main": "dist/static/js",
   "repository": "https://github.com/Queen-esther01/password-checker",
   "keywords": [
     "React",

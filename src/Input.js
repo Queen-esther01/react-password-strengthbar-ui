@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PasswordChecker from './component/PasswordChecker'
+import PasswordChecker from './PasswordChecker'
 
 function Input() {
     const [password, setPassword] = useState('')
