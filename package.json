@@ -1,5 +1,5 @@
 {
-  "name": "password-checker",
+  "name": "@react/password-checker",
   "version": "1.0.0",
   "description": "Password checker checks the strength of your passwords",
   "private": false,
