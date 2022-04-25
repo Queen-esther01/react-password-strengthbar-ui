@@ -17,23 +17,23 @@ const Check = password => {
     return result;
   }
 
-  if (password.length < 8) {
+  if ((password === null || password === void 0 ? void 0 : password.length) < 8) {
     result.errors.push('Password must be at least 8 characters long');
   }
 
-  if (password.search(/[a-z]/) === -1) {
+  if ((password === null || password === void 0 ? void 0 : password.search(/[a-z]/)) === -1) {
     result.errors.push("Password must contain at least one lowercase letter");
   }
 
-  if (password.search(/[A-Z]/) === -1) {
+  if ((password === null || password === void 0 ? void 0 : password.search(/[A-Z]/)) === -1) {
     result.errors.push('Password must contain at least one uppercase letter');
   }
 
-  if (password.search(/[0-9]/) === -1) {
+  if ((password === null || password === void 0 ? void 0 : password.search(/[0-9]/)) === -1) {
     result.errors.push('Password must contain at least one number');
   }
 
-  if (password.search(/[!@#$%^&*()`'"|?></]/) === -1) {
+  if ((password === null || password === void 0 ? void 0 : password.search(/[!@#$%^&*()`'"|?></]/)) === -1) {
     result.errors.push('Password must contain at least one special character');
     result.state = 'very good';
   } // if(!(password.length < 8) && !(password.search(/[a-z]/) === -1) && !(password.search(/[A-Z]/) === -1) && !(password.search(/[0-9]/) === -1) && !(password.search(/[!@#$%^&*]/) === -1)){
