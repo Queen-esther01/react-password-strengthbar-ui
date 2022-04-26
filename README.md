@@ -28,8 +28,8 @@ function App() {
 
     const [password, setPassword] = useState('')
 
-    const handlePasswordInput = (password) => {
-        setPassword(password)
+    const handlePasswordInput = (e) => {
+        setPassword(e.target.value)
     }
 
     return (
@@ -45,7 +45,7 @@ function App() {
 ### Getting Password Strength Data + Custom Strength Bar
 
 
-If you would like to create your own password strength bar UI, you can use the checker function instead.
+If you would like to create your own password strength bar UI, you can use the `Strength` function instead.
 This is the function that powers the password strength bar. It returns an object with the following properties:
 `state, message, password and an array of errors`
 
@@ -71,7 +71,7 @@ let result = Strength('password')
 ### Getting Password Strength Data + Password Checker Strength bar
 
 If you would like to use the password checker strength bar and also get the data, 
-pass in a function to the `strengthData` prop.
+pass in a callback function to the `strengthData` prop.
 
 
 ```javascript
