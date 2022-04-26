@@ -11,51 +11,50 @@ function PasswordCheckerComponent({ password, getData }) {
     useEffect(() => {
         let result = Check(password);
         savePasswordCheckerResult(result)
-        console.log(result)
-        //getData(result)
+        getData && getData(result)
     }, [password])
 
     //console.log(getData)
     
 
-    const emptyPassword = passwordCheckerResult?.state === 'empty' && 'bg-gray-200'
-    const veryWeakPassword = passwordCheckerResult?.errors.length === 4 && 'bg-red-500'
-    const weakPassword = passwordCheckerResult?.errors.length === 3 && 'bg-orange-500'
-    const weakGreyPassword = passwordCheckerResult?.errors.length === 3 && 'bg-gray-200'
-    const fairPassword = passwordCheckerResult?.errors.length === 2 && 'bg-orange-500'
-    const fairGreyPassword = passwordCheckerResult?.errors.length === 2 && 'bg-gray-200'
-    const strongPassword = passwordCheckerResult?.errors.length === 1 && passwordCheckerResult.state !== 'empty' && 'bg-green-500'
-    const strongGreyPassword = passwordCheckerResult?.errors.length === 1 && passwordCheckerResult.state !== 'empty' && 'bg-gray-200'
-    const veryStrongPassword = passwordCheckerResult?.errors.length === 0 && passwordCheckerResult.state !== 'empty' && 'bg-green-500'
+    const emptyPassword = passwordCheckerResult?.state === 'empty' && 'bg-gray'
+    const veryWeakPassword = passwordCheckerResult?.errors.length === 4 && 'bg-red'
+    const weakPassword = passwordCheckerResult?.errors.length === 3 && 'bg-orange'
+    const weakGreyPassword = passwordCheckerResult?.errors.length === 3 && 'bg-gray'
+    const fairPassword = passwordCheckerResult?.errors.length === 2 && 'bg-orange'
+    const fairGreyPassword = passwordCheckerResult?.errors.length === 2 && 'bg-gray'
+    const strongPassword = passwordCheckerResult?.errors.length === 1 && passwordCheckerResult.state !== 'empty' && 'bg-green'
+    const strongGreyPassword = passwordCheckerResult?.errors.length === 1 && passwordCheckerResult.state !== 'empty' && 'bg-gray'
+    const veryStrongPassword = passwordCheckerResult?.errors.length === 0 && passwordCheckerResult.state !== 'empty' && 'bg-green'
     // const veryStrongPassword = passwordCheckerResult?.errors.length === 1 && 'bg-blue-500'
 
 
-    const emptyPasswordTextColor = passwordCheckerResult?.state === 'empty' && 'text-gray-500'
+    const emptyPasswordTextColor = passwordCheckerResult?.state === 'empty' && 'text-gray'
     const emptyPasswordText = passwordCheckerResult?.state === 'empty' && 'Password is empty'
-    const veryWeakPasswordTextColor = passwordCheckerResult?.errors.length === 4 && 'text-red-500'
+    const veryWeakPasswordTextColor = passwordCheckerResult?.errors.length === 4 && 'text-red'
     const veryWeakPasswordText = passwordCheckerResult?.errors.length === 4 && 'Password is very weak'
-    const weakPasswordTextColor = passwordCheckerResult?.errors.length === 3 && 'text-orange-500'
+    const weakPasswordTextColor = passwordCheckerResult?.errors.length === 3 && 'text-orange'
     const weakPasswordText = passwordCheckerResult?.errors.length === 3 && 'Password is weak'
-    const fairPasswordTextColor = passwordCheckerResult?.errors.length === 2 && 'text-orange-500'
+    const fairPasswordTextColor = passwordCheckerResult?.errors.length === 2 && 'text-orange'
     const fairPasswordText = passwordCheckerResult?.errors.length === 2 && 'Password is fair'
-    const strongPasswordTextColor = passwordCheckerResult?.errors.length === 1 && passwordCheckerResult.state !== 'empty' && 'text-green-500'
+    const strongPasswordTextColor = passwordCheckerResult?.errors.length === 1 && passwordCheckerResult.state !== 'empty' && 'text-green'
     const strongPasswordText = passwordCheckerResult?.errors.length === 1 &&  passwordCheckerResult.state !== 'empty' && 'Password is strong'
-    const veryStrongPasswordTextColor = passwordCheckerResult?.errors.length === 0 && passwordCheckerResult.state !== 'empty' && 'text-green-500'
+    const veryStrongPasswordTextColor = passwordCheckerResult?.errors.length === 0 && passwordCheckerResult.state !== 'empty' && 'text-green'
     const veryStrongPasswordText = passwordCheckerResult?.errors.length === 0 && passwordCheckerResult.state !== 'empty' && 'Password is very strong'
     
 
     return (
         <>
-            <div className='my-4'>
-                <div className='flex gap-5 justify-between my-2'>
-                    <div className={`h-1 basis-full ${emptyPassword} ${veryWeakPassword} ${weakPassword} ${fairPassword} ${strongPassword} ${veryStrongPassword}`}></div>
-                    <div className={`h-1 basis-full ${emptyPassword} ${veryWeakPassword} ${weakPassword} ${fairPassword} ${strongPassword} ${veryStrongPassword}`} ></div>
-                    <div className={`h-1 basis-full ${emptyPassword} ${veryWeakPassword} ${weakGreyPassword} ${fairPassword} ${strongPassword} ${veryStrongPassword}`}></div>
-                    <div className={`h-1 basis-full ${emptyPassword} ${veryWeakPassword} ${weakGreyPassword} ${fairGreyPassword} ${strongPassword} ${veryStrongPassword}`}></div>
-                    <div className={`h-1 basis-full ${emptyPassword} ${veryWeakPassword} ${weakGreyPassword} ${fairGreyPassword} ${strongGreyPassword} ${veryStrongPassword}`}></div>
+            <div className='wrapper'>
+                <div className='lines-wrapper'>
+                    <div className={`line ${emptyPassword} ${veryWeakPassword} ${weakPassword} ${fairPassword} ${strongPassword} ${veryStrongPassword}`}></div>
+                    <div className={`line ${emptyPassword} ${veryWeakPassword} ${weakPassword} ${fairPassword} ${strongPassword} ${veryStrongPassword}`} ></div>
+                    <div className={`line ${emptyPassword} ${veryWeakPassword} ${weakGreyPassword} ${fairPassword} ${strongPassword} ${veryStrongPassword}`}></div>
+                    <div className={`line ${emptyPassword} ${veryWeakPassword} ${weakGreyPassword} ${fairGreyPassword} ${strongPassword} ${veryStrongPassword}`}></div>
+                    <div className={`line ${emptyPassword} ${veryWeakPassword} ${weakGreyPassword} ${fairGreyPassword} ${strongGreyPassword} ${veryStrongPassword}`}></div>
                 </div>
-                <div className='flex flex-wrap justify-between my-2'>
-                        <p className={`flex items-center ${emptyPasswordTextColor} ${veryWeakPasswordTextColor} ${weakPasswordTextColor} ${fairPasswordTextColor} ${strongPasswordTextColor} ${veryStrongPasswordTextColor} text-sm ml-auto`}>
+                <div className='message-wrapper'>
+                        <p className={`message ${emptyPasswordTextColor} ${veryWeakPasswordTextColor} ${weakPasswordTextColor} ${fairPasswordTextColor} ${strongPasswordTextColor} ${veryStrongPasswordTextColor}`}>
                         {/* <span className="material-icons text-md"> close </span> */}
                         { emptyPasswordText } { veryWeakPasswordText } { weakPasswordText } { fairPasswordText } { strongPasswordText } { veryStrongPasswordText }
                     </p>

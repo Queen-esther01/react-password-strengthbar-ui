@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-gray{
+    background-color: #e2e8f0;
+}
+.bg-orange{
+    background-color: #f97316;
+}
+.bg-red{
+    background-color: #ef4444;
+}
+.bg-green{
+    background-color: #22c55e;
+}
+.text-gray{
+    color: #6b7280;
+}
+.text-orange{
+    color: #f97316;
+}
+.text-red{
+    color: #ef4444;
+}
+.text-green{
+    color: #22c55e;
+}
+.wrapper{
+    margin: 1rem 0;
+}
+.lines-wrapper{
+    display: flex;
+    gap: 1.25rem;
+    justify-content: space-between;
+    margin: 0.25rem;
+}
+.line{
+    height: 0.25rem;
+    flex-basis: 100%;
+}
+.message-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.25rem;
+}
+.message{
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
+    margin-left: auto;
+}

@@ -30,51 +30,51 @@ function PasswordCheckerComponent(_ref) {
   (0, _react.useEffect)(() => {
     let result = (0, _checker.default)(password);
     savePasswordCheckerResult(result);
-    console.log(result); //getData(result)
+    getData && getData(result);
   }, [password]); //console.log(getData)
 
-  const emptyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.state) === 'empty' && 'bg-gray-200';
-  const veryWeakPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 4 && 'bg-red-500';
-  const weakPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'bg-orange-500';
-  const weakGreyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'bg-gray-200';
-  const fairPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'bg-orange-500';
-  const fairGreyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'bg-gray-200';
-  const strongPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'bg-green-500';
-  const strongGreyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'bg-gray-200';
-  const veryStrongPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'bg-green-500'; // const veryStrongPassword = passwordCheckerResult?.errors.length === 1 && 'bg-blue-500'
+  const emptyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.state) === 'empty' && 'bg-gray';
+  const veryWeakPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 4 && 'bg-red';
+  const weakPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'bg-orange';
+  const weakGreyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'bg-gray';
+  const fairPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'bg-orange';
+  const fairGreyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'bg-gray';
+  const strongPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'bg-green';
+  const strongGreyPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'bg-gray';
+  const veryStrongPassword = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'bg-green'; // const veryStrongPassword = passwordCheckerResult?.errors.length === 1 && 'bg-blue-500'
 
-  const emptyPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.state) === 'empty' && 'text-gray-500';
+  const emptyPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.state) === 'empty' && 'text-gray';
   const emptyPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.state) === 'empty' && 'Password is empty';
-  const veryWeakPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 4 && 'text-red-500';
+  const veryWeakPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 4 && 'text-red';
   const veryWeakPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 4 && 'Password is very weak';
-  const weakPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'text-orange-500';
+  const weakPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'text-orange';
   const weakPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 3 && 'Password is weak';
-  const fairPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'text-orange-500';
+  const fairPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'text-orange';
   const fairPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 2 && 'Password is fair';
-  const strongPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'text-green-500';
+  const strongPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'text-green';
   const strongPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 1 && passwordCheckerResult.state !== 'empty' && 'Password is strong';
-  const veryStrongPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'text-green-500';
+  const veryStrongPasswordTextColor = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'text-green';
   const veryStrongPasswordText = (passwordCheckerResult === null || passwordCheckerResult === void 0 ? void 0 : passwordCheckerResult.errors.length) === 0 && passwordCheckerResult.state !== 'empty' && 'Password is very strong';
   return /*#__PURE__*/(0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
     children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
-      className: "my-4",
+      className: "wrapper",
       children: [/*#__PURE__*/(0, _jsxRuntime.jsxs)("div", {
-        className: "flex gap-5 justify-between my-2",
+        className: "lines-wrapper",
         children: [/*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+          className: "line ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
         }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+          className: "line ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
         }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+          className: "line ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
         }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
+          className: "line ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongPassword, " ").concat(veryStrongPassword)
         }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-          className: "h-1 basis-full ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongGreyPassword, " ").concat(veryStrongPassword)
+          className: "line ".concat(emptyPassword, " ").concat(veryWeakPassword, " ").concat(weakGreyPassword, " ").concat(fairGreyPassword, " ").concat(strongGreyPassword, " ").concat(veryStrongPassword)
         })]
       }), /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-        className: "flex flex-wrap justify-between my-2",
+        className: "message-wrapper",
         children: /*#__PURE__*/(0, _jsxRuntime.jsxs)("p", {
-          className: "flex items-center ".concat(emptyPasswordTextColor, " ").concat(veryWeakPasswordTextColor, " ").concat(weakPasswordTextColor, " ").concat(fairPasswordTextColor, " ").concat(strongPasswordTextColor, " ").concat(veryStrongPasswordTextColor, " text-sm ml-auto"),
+          className: "message ".concat(emptyPasswordTextColor, " ").concat(veryWeakPasswordTextColor, " ").concat(weakPasswordTextColor, " ").concat(fairPasswordTextColor, " ").concat(strongPasswordTextColor, " ").concat(veryStrongPasswordTextColor),
           children: [emptyPasswordText, " ", veryWeakPasswordText, " ", weakPasswordText, " ", fairPasswordText, " ", strongPasswordText, " ", veryStrongPasswordText]
         })
       })]
