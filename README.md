@@ -81,8 +81,8 @@ function App() {
 
     const [password, setPassword] = useState('')
 
-    const handlePasswordInput = (password) => {
-        setPassword(password)
+    const handlePasswordInput = (e) => {
+        setPassword(e.target.value)
     }
 
     const getPasswordData = (data) => {
