@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "Check", {
+  enumerable: true,
+  get: function get() {
+    return _checker.default;
+  }
+});
 Object.defineProperty(exports, "PasswordChecker", {
   enumerable: true,
   get: function get() {
@@ -19,5 +25,7 @@ Object.defineProperty(exports, "PasswordCheckerComponent", {
 var _PasswordChecker = _interopRequireDefault(require("./PasswordChecker"));
 
 var _PasswordCheckerComponent = _interopRequireDefault(require("./PasswordCheckerComponent"));
+
+var _checker = _interopRequireDefault(require("./checker"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
