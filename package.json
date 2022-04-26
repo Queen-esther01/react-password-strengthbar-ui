@@ -1,5 +1,5 @@
 {
-  "name": "@queen-esther/password-checker",
+  "name": "react-password-strengthbar",
   "version": "1.7.7",
   "description": "Password checker checks the strength of your passwords",
   "private": false,
@@ -9,10 +9,11 @@
   "module": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Queen-esther01/password-checker.git"
+    "url": "git+https://github.com/Queen-esther01/react-password-strengthbar.git"
   },
   "keywords": [
     "React",
+    "strength-bar",
     "password-checker"
   ],
   "dependencies": {
