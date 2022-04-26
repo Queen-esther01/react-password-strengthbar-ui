@@ -1,31 +1,28 @@
-# Password Checker
+# React Password Strengthbar UI
 
 This is a react component that checks the strength of a password 
-and displays a password strength bar based on it.
+and displays a password strength bar based on input.
 It checks password strength by ensuring that all
 password have at least:
 
 **8 characters, 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character**
 
-**Please note that this package is in development, has not been fully tested or deemed fit for for use. Testing is currently ongoing and this message will be removed when done.**
+
+### View demo [here](https://react-strengthbar.vercel.app/)
+
 
 ## Install
 
 ```bash
-npm install password-checker
+npm install react-password-strengthbar-ui
 ```
-
-
 ## Usage
 
-By default, the `<PasswordChecker/>` component will have a width of 100%.
-To change this behaviour, wrap in a parent div and assign a width.
-
-Pass data into the password checker using the password prop.
+The `<PasswordChecker/>` component will take up width of it's parent, always wrap in a parent div. You can pass data into the password checker using the password prop.
 
 
 ```javascript
-import PasswordChecker from 'password-checker'
+import { PasswordChecker } from 'react-password-strengthbar-ui';
 
 function App() {
 
@@ -45,7 +42,7 @@ function App() {
 
 ```
 
-### Getting Password Checker Data + Custom Strength Bar
+### Getting Password Strength Data + Custom Strength Bar
 
 
 If you would like to create your own password strength bar UI, you can use the checker function instead.
@@ -54,9 +51,9 @@ This is the function that powers the password strength bar. It returns an object
 
 
 ```javascript
-import Check from 'password-checker/function/checker'
+import { Strength } from 'react-password-strengthbar-ui';
 
-let result = Check('password')
+let result = Strength('password')
 
 //returns:
 // {
@@ -71,13 +68,15 @@ let result = Check('password')
 // }
 
 ```
-### Getting Password Checker Data + Password Checker Strength bar
+### Getting Password Strength Data + Password Checker Strength bar
 
 If you would like to use the password checker strength bar and also get the data, 
-pass in a function to the `checkerData` prop.
+pass in a function to the `strengthData` prop.
 
 
 ```javascript
+import { PasswordChecker } from 'react-password-strengthbar-ui';
+
 function App() {
 
     const [password, setPassword] = useState('')
@@ -86,14 +85,14 @@ function App() {
         setPassword(password)
     }
 
-    const getCheckerData = (data) => {
+    const getPasswordData = (data) => {
         console.log(data)
     }
 
     return (
         <div className='w-full'>
             <input type={text} onChange={handlePasswordInput}/>
-            <PasswordChecker password={password} checkerData={getCheckerData} />
+            <PasswordChecker password={password} strengthData={getPasswordData} />
         </div>
     );
 }

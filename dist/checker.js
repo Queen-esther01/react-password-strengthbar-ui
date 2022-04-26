@@ -4,7 +4,7 @@ require("core-js/modules/es.regexp.exec.js");
 
 require("core-js/modules/es.string.search.js");
 
-const Check = password => {
+const Strength = password => {
   let result = {
     state: 'empty',
     message: 'Password is empty',
@@ -70,4 +70,4 @@ const Check = password => {
   return result;
 };
 
-module.exports = Check;
+module.exports = Strength;

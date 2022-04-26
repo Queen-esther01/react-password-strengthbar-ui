@@ -1,6 +1,6 @@
 
 
-const Check = (password) =>{
+const Strength = (password) =>{
 
     let result = {
         state : 'empty',
@@ -57,4 +57,4 @@ const Check = (password) =>{
     return result
 }
 
-module.exports = Check;
+module.exports = Strength;

@@ -3,12 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Check", {
-  enumerable: true,
-  get: function get() {
-    return _checker.default;
-  }
-});
 Object.defineProperty(exports, "PasswordChecker", {
   enumerable: true,
   get: function get() {
@@ -19,6 +13,12 @@ Object.defineProperty(exports, "PasswordCheckerComponent", {
   enumerable: true,
   get: function get() {
     return _PasswordCheckerComponent.default;
+  }
+});
+Object.defineProperty(exports, "Strength", {
+  enumerable: true,
+  get: function get() {
+    return _checker.default;
   }
 });
 

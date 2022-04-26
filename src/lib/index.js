@@ -1,5 +1,5 @@
 import PasswordChecker from "./PasswordChecker";
 import PasswordCheckerComponent from "./PasswordCheckerComponent";
-import Check from "./checker";
+import Strength from "./checker";
 
-export { PasswordChecker, PasswordCheckerComponent, Check };
+export { PasswordChecker, PasswordCheckerComponent, Strength };

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { AppContext } from './AppContext'
 import PasswordCheckerComponent from './PasswordCheckerComponent'
 
-function PasswordChecker({ password, checkerData }) {
+function PasswordChecker({ password, strengthData }) {
 
     const [result, setresult] = useState()
     const data = {
@@ -15,7 +15,7 @@ function PasswordChecker({ password, checkerData }) {
 
     return (
         <AppContext.Provider value={data}>
-            <PasswordCheckerComponent password={password} getData={checkerData} />
+            <PasswordCheckerComponent password={password} getData={strengthData} />
         </AppContext.Provider>
     )
 }

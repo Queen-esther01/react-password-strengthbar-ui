@@ -9,7 +9,7 @@
   "module": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Queen-esther01/react-password-strengthbar.git"
+    "url": "git+https://github.com/Queen-esther01/react-password-strengthbar-ui.git"
   },
   "keywords": [
     "React",

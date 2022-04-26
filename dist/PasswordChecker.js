@@ -24,7 +24,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function PasswordChecker(_ref) {
   let {
     password,
-    checkerData
+    strengthData
   } = _ref;
   const [result, setresult] = (0, _react.useState)();
   const data = {
@@ -37,7 +37,7 @@ function PasswordChecker(_ref) {
     value: data,
     children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_PasswordCheckerComponent.default, {
       password: password,
-      getData: checkerData
+      getData: strengthData
     })
   });
 }
